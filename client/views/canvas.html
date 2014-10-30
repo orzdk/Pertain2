@@ -1,0 +1,115 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Pertain2 (c) orz.dk 2013</title>
+    <SocketStream/>
+</head>
+
+<body style='visibility:hidden'><br><br><br>
+<div id="container"></div>
+
+<div id='gamearea'> <div id='gameareabg'></div>
+    <div id='gameareacontent'>
+
+
+    <br><div id="headlinediv">PERTAIN 2 (c) orz.dk 2013 |  Made with HTML5, canvas, node.js v0.8.15, buzz.js v1.0.5, SocketStream v0.34, three.js & jQuery 1.4.4 on BitNami Ubuntu 12.04.1 node.js stack |
+        Music by Kruder/Dorfmeister, inchadney@freesound.org<br><br></div>
+    <br>
+    <div id="infodiv" class='gamediv'>
+
+        <table>
+            <tr height="20px"><td></td>
+            <tr>
+                <td width="55px">Player Tag
+                <td width="10px"><input type='text' id='playertag'>
+                <td width="10px"><input type=button value='Connect' id='connectbutton' style='font-size:x-small;height:20px'>
+        </table>
+        <br>
+        Players:
+
+        <table>
+            <tr>
+                <td class="playerlisttd"> <img src='images/player0.png'> <td class="playerlisttd"> <input type='text' id='player0name' class='playername-inactive'>
+                <td class="playerlisttd"> <img src='images/player1.png'> <td class="playerlisttd"> <input type='text' id='player1name' class='playername-inactive'>
+                <td class="playerlisttd"> <img src='images/player2.png'> <td class="playerlisttd"> <input type='text' id='player2name' class='playername-inactive'>
+                <td class="playerlisttd"> <img src='images/player3.png'> <td class="playerlisttd"> <input type='text' id='player3name' class='playername-inactive'>
+        </table>
+
+    </div>
+    <br>
+    <div id="weapondiv">
+        Click Connect, then click board to place blocks, and use arrowkeys to move player  <br><br>Weapon :
+        <select id="weapon">
+            <option value='missile'>Missile</option>
+        </select>
+    </div>
+    <br>
+
+    <div id='cityinfodiv'><br>
+        City Info : <br>
+        <input type='text' id='cityInfoLine1'> <br>
+        <textarea id='citytextinfo'></textarea>
+    </div>
+
+    <div id='moveinfodiv'><br>
+        Player Move Info : <br><br>
+        <input type='text' id='moveInfoLine1'><br>
+        <input type='text' id='moveInfoLine2'><br>
+        <input type='text' id='moveInfoLine3'><br>
+    </div>
+
+    <div id='playerbuildingsdiv'><br>
+        Player Buildings Info : <br><br>
+        <input type='text' id='playerBuildingInfoLine1'><br>
+        <input type='text' id='playerBuildingInfoLine2'><br>
+        <input type='text' id='playerBuildingInfoLine3'><br>
+        <input type='radio' id='buildingTypeBase' value='block' name='buildingType' checked>Base<br>
+        <input type='radio' id='buildingTypeWarTree' value='tree' name='buildingType'>War-Tree<br>
+    </div>
+
+    <div id='logdiv'><br>
+        Player Buildings Info : <br><br>
+        <input type='text' id='log1'><br>
+        <input type='text' id='log2'><br>
+        <input type='text' id='log3'><br>
+    </div>
+
+    <div id='gamediv'>
+        <img id='bgimage' src='images/background_pertain5.png'>
+        <canvas id='tilecanvas' width='720' height='400'></canvas>
+        <canvas id='maskcanvas' width='720' height='400'></canvas>
+        <canvas id='gamecanvas' width='720' height='400'></canvas>
+        <canvas id='pointercanvas' width='720' height='400'></canvas>
+        <canvas id='pointersmallcanvas' width='720' height='400'></canvas>
+    </div>
+
+    <div id='rightmenudiv'>
+        <div id='rightmenudivbg'></div> <br>
+        <div id="dicediv">
+            <div >
+                <img id='imgdice1' src='images/dices0.png'>
+                <img id='imgdice2' src='images/dices0.png'>
+            </div>
+            <input type='button' id='rollbutton' value='Roll'>
+        </div>
+        <br><br><br>
+        <div id='chatdiv'>
+            <textarea id='chatroom'></textarea><br><br>
+            <input type='text' id='chatmessage'>
+            <br><input type='button' id='chatsubmit' value='Say !'>
+        </div>
+        <div id='mapdiv'>
+            <textarea id='map'></textarea><br><br>
+            <input type='button' id='mapsubmit' value='Apply' class='soundbutton'>
+
+            <br><br>Toggle Sound:<br><br>
+            <input type='button' value='Birds (-)' id='toggleambientsound' class='soundbutton'>
+            <input type='button' value='Game (+)' id='togglegamesound' class='soundbutton'>
+            <input type='button' value='Music (-)' id='togglemusicsound' class='soundbutton'><br><br>Toggle Background: <br> <br>
+            <input type='button' value='Birds (+)' id='togglebirds' class='soundbutton'>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
